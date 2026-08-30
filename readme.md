@@ -27,7 +27,11 @@ XGBoost generalizes best (highest test R², smallest train/test gap) and is used
 
 ## 🛠️ Tech Stack
 
-Python · Pandas · NumPy · Scikit-learn · XGBoost · Matplotlib · Seaborn · Streamlit · Joblib
+**Languages & Libraries:**  
+Python · Pandas · NumPy · Scikit-learn · XGBoost · Matplotlib · Seaborn
+
+**Application & Database:**  
+Streamlit · MySQL · mysql-connector-python · bcrypt · Joblib
 
 ## 📂 Project Structure
 
