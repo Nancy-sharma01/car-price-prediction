@@ -1,16 +1,18 @@
 # 🚗 Car Price Prediction
 
-An end-to-end machine learning project that predicts the resale price of used cars, built on the CarDekho dataset. Three regression models are trained, tuned, and compared for overfitting — then served through a multi-page Streamlit app with login, model selection, and instant price prediction.
+An end-to-end machine learning project that predicts the resale price of used cars, built on the CarDekho dataset. Three regression models are trained, tuned, and compared for overfitting — then served through a multi-page Streamlit app with user authentication, model selection, and instant price prediction.
 
 ## ✨ Features
 
 - **Data preprocessing** — handles missing values, duplicates, high-cardinality categorical columns (brand extraction), outlier clipping, label encoding, and feature scaling
 - **Three tuned regression models** — Random Forest, Gradient Boosting, and XGBoost, each optimized with `RandomizedSearchCV`
 - **Overfitting diagnostics** — train vs test R² comparison, actual-vs-predicted plots, and residual plots for every model
+- **User authentication** — MySQL-based signup and login system with securely hashed passwords
 - **Multi-page Streamlit app**:
-  - 🔐 Login page (name + email)
-  - 📊 Model selection page — compare accuracy and graphs for all three models
-  - 💰 Prediction page — enter car details, get an instant price estimate
+  - 🔐 Login / Signup page
+  - 🏠 Model selection page — compare accuracy and graphs for all three models
+  - 💰 Prediction page — enter car details and get an instant price estimate
+  - 🚪 Logout functionality
 - **Backend activity logging** — login, model selection, and logout events are logged with timestamps
 
 ## 🧠 Model Performance
@@ -31,11 +33,19 @@ Python · Pandas · NumPy · Scikit-learn · XGBoost · Matplotlib · Seaborn ·
 
 ```
 car-price-prediction/
-├── train.py              # Full preprocessing + training + tuning pipeline
-├── app.py                 # Multi-page Streamlit app
-├── cardekho.csv            # Dataset
+│
+├── train.py                  # Full preprocessing + training + tuning pipeline
+├── app.py                    # Streamlit application
+├── auth.py                   # User signup and login authentication
+├── database.py               # MySQL database connection
+│
+├── database/
+│   └── car_price.sql         # SQL database schema and users table
+│
+├── cardekho.csv              # Dataset
 ├── requirements.txt
-└── .gitignore
+├── .gitignore
+└── README.md
 ```
 
 Running `train.py` generates the model artifacts (`all_models.pkl`, `scaler.pkl`, `label_encoders.pkl`, `feature_order.pkl`, `model_metrics.pkl`) and diagnostic plots — these are not committed to the repo since the trained models exceed GitHub's file size limit.
@@ -65,11 +75,13 @@ streamlit run app.py
 
 ## 🔮 Future Scope
 
-- Replace the plain-text activity log with a database
-- Add password-based authentication
-- Compare against LightGBM / CatBoost
-- Add SHAP-based prediction explanations
-- Host publicly on Streamlit Community Cloud
+-Add Google authentication / OAuth
+-Store prediction history in MySQL
+-Add user-specific prediction history and dashboards
+-Compare against LightGBM / CatBoost
+-Add SHAP-based prediction explanations
+-Improve UI/UX and visualizations
+-Host publicly on Streamlit Community Cloud
 
 ## 👤 Author
 
