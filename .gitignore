@@ -28,8 +28,6 @@ Thumbs.db
 # IDE
 .vscode/
 
-# Database credentials
-database.py
 
 # Streamlit secrets
 .streamlit/secrets.toml
