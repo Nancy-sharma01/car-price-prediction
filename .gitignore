@@ -4,7 +4,6 @@ venv/
 
 # Trained models & preprocessing artifacts (regenerate via: python train.py)
 # all_models.pkl alone is ~180MB — exceeds GitHub's 100MB file limit
-all_models.pkl
 best_model.pkl
 best_model_name.pkl
 model_metrics.pkl
@@ -27,7 +26,6 @@ Thumbs.db
 
 # IDE
 .vscode/
-
 
 # Streamlit secrets
 .streamlit/secrets.toml
