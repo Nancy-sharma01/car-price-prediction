@@ -3,16 +3,9 @@ import streamlit as st
 
 
 def get_connection():
-
-    host = st.secrets["mysql"]["host"]
-    port = st.secrets["mysql"]["port"]
-
-    st.write("DEBUG HOST:", host)
-    st.write("DEBUG PORT:", port)
-
     return mysql.connector.connect(
-        host=host,
-        port=port,
+        host=st.secrets["mysql"]["host"],
+        port=st.secrets["mysql"]["port"],
         user=st.secrets["mysql"]["user"],
         password=st.secrets["mysql"]["password"],
         database=st.secrets["mysql"]["database"],
