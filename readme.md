@@ -10,7 +10,7 @@
 [![MySQL](https://img.shields.io/badge/MySQL-Cloud--hosted-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](#-license)
 
-**[🌐 Live Demo](https://car-price-predictor-find.streamlit.app/) · [📂 Source Code](https://github.com/Nancy-sharma01/car-price-prediction)**
+**[🌐 Live Demo](https://carworthi.streamlit.app/) · [📂 Source Code](https://github.com/Nancy-sharma01/car-price-prediction)**
 
 </div>
 
