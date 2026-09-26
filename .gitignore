@@ -3,13 +3,8 @@
 venv/
 
 # Trained models & preprocessing artifacts (regenerate via: python train.py)
-# all_models.pkl alone is ~180MB — exceeds GitHub's 100MB file limit
-best_model.pkl
-best_model_name.pkl
-model_metrics.pkl
-scaler.pkl
-label_encoders.pkl
-feature_order.pkl
+# all_models.pkl alone is ~180MB — exceeds GitHub's 100MB file limit but now added because of git lfs
+
 model_comparison.csv
 
 # Backend activity log (contains user emails — don't commit)
